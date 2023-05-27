@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 
 function changeTextContent(element: HTMLTitleElement | Element | null) {
   if (!element) return;
