@@ -3,9 +3,23 @@
   --midnight-express: #13183f;
   --manatee: #83869a;
   --french-rose: #f74780;
+  --chetwode-blue: #666ca3;
+  --carnation-pink: #ffa7c3;
 
   --gradient-one: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  --gradient-one-hover: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
   --gradient-two: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+  --gradient-two-hover: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
 
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: var(--white);
@@ -34,6 +48,10 @@
     padding: 0.9rem 2.4rem 1.1rem;
     background-color: var(--midnight-express);
     border-radius: 2.8rem;
+
+    &:hover {
+      background-color: var(--chetwode-blue);
+    }
   }
 }
 
@@ -71,7 +89,15 @@
     background-image: var(--gradient-one);
     border-radius: 3.15rem;
     width: fit-content;
+
+    &:hover {
+      background-image: var(--gradient-one-hover);
+    }
   }
+}
+
+.illustration {
+  z-index: -1;
 }
 
 .container--courses {
@@ -131,6 +157,10 @@
     line-height: 2.8rem;
     color: var(--french-rose);
     width: fit-content;
+
+    &:hover {
+      color: var(--carnation-pink);
+    }
   }
 }
 
@@ -155,5 +185,161 @@
     padding: 1rem 2.4rem;
     background-image: var(--gradient-two);
     border-radius: 2.8rem;
+
+    &:hover {
+      background-image: var(--gradient-two-hover);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 2.4rem 3.9rem 10rem 3.9rem;
+    overflow: hidden;
+  }
+
+  .container--hero {
+    margin-top: 9.9rem;
+    grid-template-columns: 39.8rem 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .copywrite {
+    &__description {
+      margin-top: 0.1rem;
+    }
+  }
+
+  .illustration {
+    width: 64.071rem;
+    height: 64rem;
+    position: absolute;
+    top: -26.3rem;
+    right: -33.8rem;
+  }
+
+  .container--courses {
+    margin-top: 8.6rem;
+    padding: 0 4rem 8.6rem 4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5.6rem 1rem;
+  }
+
+  .popular {
+    padding: 5.6rem 2.1rem 0 3.2rem;
+  }
+
+  .course {
+    padding: 5.6rem 2.2rem 3.2rem 3.2rem;
+
+    &__icon {
+      left: 3.2rem;
+    }
+  }
+
+  .footer {
+    padding: 3.6rem 3.9rem 3.6rem 4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 2.4rem 16.5rem 25rem 16.5rem;
+  }
+
+  .nav {
+    &__logo {
+      width: 11.4rem;
+      height: 4.5rem;
+    }
+
+    &__cta {
+      font-size: 1.8rem;
+      padding: 1.4rem 3.1rem 1.4rem 3.2rem;
+    }
+  }
+
+  .container--hero {
+    margin-top: 17.8rem;
+    grid-template-columns: 45.7rem 1fr;
+    gap: 0;
+  }
+
+  .copywrite {
+    row-gap: 2.9rem;
+
+    &__heading {
+      font-size: 5.6rem;
+      line-height: 7.056rem;
+    }
+
+    &__description {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+
+    &__cta {
+      margin-top: 1.1rem;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      padding: 1.9rem 3.1rem 1.6rem 3.2rem;
+    }
+  }
+
+  .illustration {
+    width: 99.163rem;
+    height: 93.692rem;
+    top: -39.8rem;
+    right: -50.1rem;
+  }
+
+  .container--courses {
+    padding: 0 16.5rem 14rem 16.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8rem 3rem;
+  }
+
+  .popular {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    padding: 6.4rem 3.2rem 0 3.2rem;
+    border-radius: 1.5rem;
+  }
+
+  .course {
+    padding: 6.4rem 3.2rem 4rem 3.2rem;
+    border-radius: 1.5rem;
+    flex-direction: column;
+    row-gap: 2.4rem;
+
+    &__heading {
+      font-size: 2.4rem;
+      line-height: 3.024rem;
+    }
+
+    &__description {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+
+    &__cta {
+      margin-top: unset;
+    }
+  }
+
+  //
+  .footer {
+    padding: 3.2rem 16.5rem;
+
+    &__logo {
+      width: 11.4rem;
+      height: 4.5rem;
+    }
+
+    &__cta {
+      font-size: 1.8rem;
+      padding: 1.4rem 3.1rem 1.4rem 3.2rem;
+    }
   }
 }
